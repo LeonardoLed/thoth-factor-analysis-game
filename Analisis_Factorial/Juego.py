@@ -411,7 +411,7 @@ elif level == 3:
         st.dataframe(pd.DataFrame(np.round(p,3), index=st.session_state.loadings_player.index, columns=st.session_state.loadings_player.columns).style.background_gradient(cmap="RdBu_r"))
         choice = st.radio("¿Cuál rotación hace las cargas más simples?", ["Varimax","Promax"])
         if st.button("Confirmar Nivel 3"):
-            correct = st.session_state.correct_dynamic[4]["answer"]
+            correct = st.session_state.correct_dynamic[3]["answer"]
             pts = 10 if choice == correct else 0
             record_answer(3, choice, pts)
             if pts > 0:
