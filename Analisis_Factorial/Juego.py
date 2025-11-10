@@ -215,7 +215,7 @@ with st.sidebar:
     st.image(
         "Toth.jpg",
         caption="Thoth — Dios de la Sabiduría",
-        use_container_width=True
+        use_column_width=True
     )
 
     st.markdown("<h3 style='margin:6px 0 2px 0;'>Thoth — tu guía</h3>", unsafe_allow_html=True)
