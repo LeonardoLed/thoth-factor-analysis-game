@@ -16,6 +16,7 @@ from sklearn.preprocessing import StandardScaler
 from scipy.linalg import svd, eigh
 from scipy.stats import chi2
 import random
+import os
 
 # ---------------------------
 # Page config & CSS (tema)
@@ -212,11 +213,10 @@ def start_new_game():
 with st.sidebar:
     st.markdown("<div class='card' style='text-align:center'>", unsafe_allow_html=True)
     # Thoth image (public domain / wikipedia). Replace with local file if desired.
-    st.image(
-        "Toth.jpg",
-        caption="Thoth — Dios de la Sabiduría",
-        use_column_width=True
-    )
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    image_path = os.path.join(current_dir, "Toth.jpg")
+
+    st.image(image_path, caption="Thoth — Dios de la Sabiduría", use_container_width=True)
 
     st.markdown("<h3 style='margin:6px 0 2px 0;'>Thoth — tu guía</h3>", unsafe_allow_html=True)
     st.markdown("<div class='small-muted'>Thoth aparece siempre en su imagen: calma, sabiduría y guía pedagógica.</div>", unsafe_allow_html=True)
