@@ -7,7 +7,7 @@ seaborn==0.13.2
 scikit-learn==1.5.2
 
 # Visualización y manejo de imágenes
-Pillow==10.3.0
+Pillow==10.4.0
 requests==2.32.3
 
 # Extra (interactividad y emojis)
